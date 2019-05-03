@@ -5,8 +5,9 @@ before:
     # you may remove this if you don't use vgo
     - go mod download
 builds:
-- env:
-  - CGO_ENABLED=0
+  - main: ./cmd/yapl/main.go
+    env:
+    - CGO_ENABLED=0
 archives:
 - replacements:
     darwin: Darwin
